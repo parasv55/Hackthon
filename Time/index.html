@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Time Management Dashboard</h1>
+    </header>
+    <div class="dashboard">
+        <div class="widget clock-widget">
+            <h2>Digital Clock</h2>
+            <div id="clock" class="display"></div>
+        </div>
+
+        <div class="widget stopwatch-widget">
+            <h2>Stopwatch</h2>
+            <div id="stopwatch" class="display">00:00:00</div>
+            <div class="controls">
+                <button id="startStopwatch">Start</button>
+                <button id="resetStopwatch">Reset</button>
+            </div>
+        </div>
+
+        <div class="widget timer-widget">
+            <h2>Timer</h2>
+            <div class="timer-input">
+                <input type="number" id="minutes" placeholder="Minutes" min="0">
+                <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+            </div>
+            <div id="timer" class="display">00:00</div>
+            <div class="controls">
+                <button id="startTimer">Start</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+        </div>
+
+        <div class="widget pomodoro-widget">
+            <h2>Pomodoro Timer</h2>
+            <div class="pomodoro-display">
+                <div id="pomodoroTime" class="display">25:00</div>
+                <div id="pomodoroStatus" class="status">Work Time</div>
+            </div>
+            <div class="controls">
+                <button id="startPomodoro">Start</button>
+                <button id="resetPomodoro">Reset</button>
+            </div>
+            <div class="pomodoro-cycles">
+                <span>Cycles: </span><span id="cycleCount">0/4</span>
+            </div>
+        </div>
+
+        <div class="widget world-clock-widget">
+            <h2>World Clock</h2>
+            <div class="world-clocks">
+                <div class="world-time">
+                    <select class="timezone-select" id="timezone1">
+                        <option value="America/New_York">New York</option>
+                        <option value="America/Los_Angeles">Los Angeles</option>
+                        <option value="America/Chicago">Chicago</option>
+                        <option value="America/Toronto">Toronto</option>
+                        <option value="Europe/London">London</option>
+                        <option value="Europe/Paris">Paris</option>
+                        <option value="Europe/Berlin">Berlin</option>
+                        <option value="Asia/Tokyo">Tokyo</option>
+                        <option value="Asia/Singapore">Singapore</option>
+                        <option value="Asia/Dubai">Dubai</option>
+                        <option value="Australia/Sydney">Sydney</option>
+                    </select>
+                    <div id="clock1" class="display"></div>
+                </div>
+                <div class="world-time">
+                    <select class="timezone-select" id="timezone2">
+                        <option value="Europe/London">London</option>
+                        <option value="America/New_York">New York</option>
+                        <option value="America/Los_Angeles">Los Angeles</option>
+                        <option value="America/Chicago">Chicago</option>
+                        <option value="America/Toronto">Toronto</option>
+                        <option value="Europe/Paris">Paris</option>
+                        <option value="Europe/Berlin">Berlin</option>
+                        <option value="Asia/Tokyo">Tokyo</option>
+                        <option value="Asia/Singapore">Singapore</option>
+                        <option value="Asia/Dubai">Dubai</option>
+                        <option value="Australia/Sydney">Sydney</option>
+                    </select>
+                    <div id="clock2" class="display"></div>
+                </div>
+                <div class="world-time">
+                    <select class="timezone-select" id="timezone3">
+                        <option value="Asia/Tokyo">Tokyo</option>
+                        <option value="America/New_York">New York</option>
+                        <option value="America/Los_Angeles">Los Angeles</option>
+                        <option value="America/Chicago">Chicago</option>
+                        <option value="America/Toronto">Toronto</option>
+                        <option value="Europe/London">London</option>
+                        <option value="Europe/Paris">Paris</option>
+                        <option value="Europe/Berlin">Berlin</option>
+                        <option value="Asia/Singapore">Singapore</option>
+                        <option value="Asia/Dubai">Dubai</option>
+                        <option value="Australia/Sydney">Sydney</option>
+                    </select>
+                    <div id="clock3" class="display"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget todo-widget">
+            <h2>Todo List</h2>
+            <div class="todo-input">
+                <input type="text" id="todoInput" placeholder="Add new task">
+                <input type="time" id="todoTime">
+                <button id="addTodo">Add</button>
+            </div>
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
